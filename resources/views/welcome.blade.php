@@ -16,7 +16,6 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="antialiased font-sans">
-
         <div class="flex flex-col items-center justify-center mt-48">
             <div>
                 <img
@@ -42,6 +41,5 @@
                 </a>
             </div>
         </div>
-
     </body>
 </html>
