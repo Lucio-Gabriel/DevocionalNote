@@ -1,8 +1,9 @@
+@php use Illuminate\Support\Facades\Auth; @endphp
 <x-app-layout>
     <div class="py-12 pt-44">
         <div>
             <h1 class="text-center text-2xl font-semibold text-primary">
-                Olá, {{ \Illuminate\Support\Facades\Auth::user()->name }} Feliz em ter você aqui
+                Olá, {{ Auth::user()->name }} Feliz em ter você aqui
             </h1>
         </div>
 
