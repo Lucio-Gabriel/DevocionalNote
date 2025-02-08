@@ -17,6 +17,7 @@ export default {
             colors:{
                 'primary': "#4043C9",
                 'primary-accent': "#5B5DCA",
+                'gray-accent': "#57595C",
             },
         },
     },

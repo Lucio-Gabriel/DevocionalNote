@@ -28,12 +28,12 @@ new #[Layout('layouts.guest')] class extends Component
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
-    <div class="flex flex-col mb-7">
-        <h1 class="text-xl font-semibold text-primary">
+    <div class="flex flex-col md:items-center mb-7">
+        <h1 class="text-xl md:text-2xl font-semibold text-primary">
             Bem vindo de volta
         </h1>
 
-        <p class="text-sm font-normal">
+        <p class="text-sm text-gray-accent font-normal">
             Faça seu login para acessar suas notas
         </p>
     </div>
@@ -41,7 +41,13 @@ new #[Layout('layouts.guest')] class extends Component
     <form wire:submit="login">
         <!-- Email Address -->
         <div>
-            <x-text-input wire:model="form.email" id="email" class="block mt-1 w-full" type="email" name="email" required autofocus autocomplete="username" />
+            <x-text-input wire:model="form.email" id="email" class="block mt-1 w-full"
+                          type="email"
+                          name="email"
+                          placeholder="Email"
+                          required autofocus
+                          autocomplete="username"
+            />
             <x-input-error :messages="$errors->get('form.email')" class="mt-2" />
         </div>
 
@@ -50,14 +56,16 @@ new #[Layout('layouts.guest')] class extends Component
             <x-text-input wire:model="form.password" id="password" class="block mt-1 w-full"
                             type="password"
                             name="password"
-                            required autocomplete="current-password" />
+                            placeholder="Senha"
+                            required autocomplete="current-password"
+            />
 
             <x-input-error :messages="$errors->get('form.password')" class="mt-2" />
         </div>
 
         <div class="flex justify-end items-end mt-3.5">
             @if (Route::has('password.request'))
-                <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}" wire:navigate>
+                <a class="text-sm text-gray-accent hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}" wire:navigate>
                     Esqueceu sua senha?
                 </a>
             @endif
@@ -71,12 +79,12 @@ new #[Layout('layouts.guest')] class extends Component
     </form>
 
     <div class="flex items-center justify-center mt-96 md:mt-4">
-        <p class="text-sm font-normal">
+        <p class="text-sm font-normal text-gray-accent">
             Ainda não possui conta?
 
             <a
                 href="{{ route('register') }}"
-                class="text-primary font-semibold"
+                class="text-primary font-semibold hover:text-primary-accent duration-300"
             >
                 Registre-se
             </a>
