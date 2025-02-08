@@ -16,11 +16,10 @@
         </div>
 
         <div class="text-start md:text-start md:pl-[500px] mt-4">
-            <h2 class="pl-10 md:text-xl text-primary font-serif font-semibold">Provérbios 8:22</h2>
+            <h2 class="pl-10 md:text-xl text-primary font-serif font-semibold">{{ $verses['title'] }}</h2>
 
             <p class="pl-10  font-serif">
-                O Senhor me possuiu no princípio de seus caminhos,
-                desde então, e antes de suas obras.
+                {{ $verses['text'] }}
             </p>
         </div>
 
