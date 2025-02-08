@@ -15,15 +15,15 @@
             />
         </div>
 
-        <div class="text-start md:text-start md:pl-[500px] mt-4">
-            <h2 class="pl-10 md:text-xl text-primary font-serif font-semibold">{{ $verses['title'] }}</h2>
+        <div class="flex flex-col justify-center items-center mt-4">
+            <h2 class="md:text-xl text-primary font-serif font-semibold">{{ $verses['title'] }}</h2>
 
-            <p class="pl-10  font-serif">
+            <p class="font-serif">
                 {{ $verses['text'] }}
             </p>
         </div>
 
-        <div class="mt-8">
+        <div class="mt-8 md:mt-12">
             <h2 class="text-center text-xl font-semibold text-primary">
                 Escolha a sua ação hoje
             </h2>
