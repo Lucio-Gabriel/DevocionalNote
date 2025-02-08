@@ -33,7 +33,6 @@
                 <a href="#"
                    class="flex items-center gap-2 bg-primary text-white font-medium px-32 py-3 rounded-md shadow-md hover:bg-primary-accent duration-300"
                 >
-
                     Minhas anotações
 
                     <x-svg.notes
@@ -52,6 +51,5 @@
                 </a>
             </div>
         </div>
-
     </div>
 </x-app-layout>
