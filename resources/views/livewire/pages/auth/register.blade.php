@@ -50,7 +50,12 @@ new #[Layout('layouts.guest')] class extends Component
 
     <form wire:submit="register">
         <!-- Name -->
-        <div>
+        <div class="relative">
+            <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                <x-svg.person
+                    class="w-5 h-5 text-gray-accent"
+                />
+            </div>
             <x-text-input wire:model="name"
                           id="name"
                           class="block mt-1 w-full"
@@ -64,7 +69,12 @@ new #[Layout('layouts.guest')] class extends Component
         </div>
 
         <!-- Email Address -->
-        <div class="mt-4">
+        <div class="mt-4 relative">
+            <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                <x-svg.envelope
+                    class="w-5 h-5 text-gray-accent"
+                />
+            </div>
             <x-text-input wire:model="email"
                           id="email"
                           class="block mt-1 w-full"
@@ -78,7 +88,12 @@ new #[Layout('layouts.guest')] class extends Component
         </div>
 
         <!-- Password -->
-        <div class="mt-4">
+        <div class="mt-4 relative">
+            <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                <x-svg.password
+                    class="w-5 h-5 text-gray-accent"
+                />
+            </div>
             <x-text-input wire:model="password"
                           id="password"
                           class="block mt-1 w-full"
@@ -93,7 +108,12 @@ new #[Layout('layouts.guest')] class extends Component
         </div>
 
         <!-- Confirm Password -->
-        <div class="mt-4">
+        <div class="mt-4 relative">
+            <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                <x-svg.password
+                    class="w-5 h-5 text-gray-accent"
+                />
+            </div>
             <x-text-input wire:model="password_confirmation"
                           id="password_confirmation"
                           class="block mt-1 w-full"
