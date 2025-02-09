@@ -19,7 +19,7 @@ new class extends Component
 {{--<nav x-data="{ open: false }" class="bg-white border-b border-gray-100">--}}
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-end h-16">
+        <div class="flex justify-between h-16">
 {{--            <div class="flex">--}}
 {{--                <!-- Logo -->--}}
 {{--                <div class="shrink-0 flex items-center">--}}
@@ -75,7 +75,18 @@ new class extends Component
 {{--                    </svg>--}}
 {{--                </button>--}}
 {{--            </div>--}}
-            <div>
+
+            @if(!request()->routeIs('dashboard'))
+            <div class="mt-4">
+                <a href="{{ route('dashboard') }}" wire:navigate class="w-full text-end mt-4 text-primary hover:text-primary-accent duration-300">
+                    <x-svg.arrow
+                        class="w-10 h-10 "
+                    />
+                </a>
+            </div>
+            @endif
+
+            <div class="md:pt-1.5">
                 <button wire:click="logout" class="w-full text-end mt-4">
                     <x-responsive-nav-link>
                        Sair
