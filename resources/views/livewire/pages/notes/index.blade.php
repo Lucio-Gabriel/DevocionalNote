@@ -1,4 +1,4 @@
-<div>
+ <div>
     <div class="text-center">
         <h1 class="text-xl md:text-2xl md:pt-24 text-black-accent font-medium">
             Todas as sua notas
@@ -22,20 +22,21 @@
         </div>
     </div>
 
-    <div class="flex justify-center items-center mt-8">
-        <div class="bg-[#B3B3B3] py-8 px-56 rounded-md shadow-lg  md:w-7/12">
-            <span class="">
+    <div class="bg-[#B3B3B3] flex items-start justify-start ml-4 mr-5 md:ml-72 md:mr-72 py-8 mt-8 rounded-md shadow-lg max-w-full">
+        <div class="flex ml-5">
+            <span class="text-4xl font-semibold mt-1 text-primary">
                 <i class="bi bi-sticky"></i>
             </span>
 
-            <h3></h3>
+            <div class="ml-6">
+                <h3 class="text-xl font-normal">
+                    Provérbios 8:22
+                </h3>
 
-            <p></p>
-
-
+                <p class="text-xs">
+                    Leitura da minha manhã
+                </p>
             <div>
-
-            </div>
         </div>
     </div>
-</div>
+ </div>
