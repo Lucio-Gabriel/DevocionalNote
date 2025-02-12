@@ -22,21 +22,30 @@
         </div>
     </div>
 
-    <div class="bg-[#B3B3B3] flex items-start justify-start ml-4 mr-5 md:ml-72 md:mr-72 py-8 mt-8 rounded-md shadow-lg max-w-full">
+     <div class="bg-[#B3B3B3] flex items-start justify-start ml-4 mr-5 md:ml-72 md:mr-72 py-8 mt-8 rounded-md shadow-lg max-w-full">
         <div class="flex ml-5">
             <span class="text-4xl font-semibold mt-1 text-primary">
                 <i class="bi bi-sticky"></i>
             </span>
 
-            <div class="ml-6">
-                <h3 class="text-xl font-normal">
-                    Provérbios 8:22
-                </h3>
+             <div class="flex flex-wrap ml-6">
+                 <h3 class="text-xl font-normal">
+                     Provérbios 8:22
+                 </h3>
 
-                <p class="text-xs">
-                    Leitura da minha manhã
-                </p>
-            <div>
-        </div>
-    </div>
+                 <p class="text-xs">
+                     Leitura da minha manhã
+                 </p>
+             </div>
+
+            <div class="flex justify-end items-end mt-1 ml-44 md:ml-[750px] text-4xl">
+                <a
+                    href="#"
+                    class=""
+                >
+                    <i class="bi bi-caret-right-fill"></i>
+                </a>
+            </div>
+         </div>
+     </div>
  </div>
