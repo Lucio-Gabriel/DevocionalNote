@@ -88,7 +88,9 @@ new class extends Component
 
             <div class="md:pt-1.5">
                 <button wire:click="logout" class="w-full text-end mt-4">
-                    <x-responsive-nav-link>
+                    <x-responsive-nav-link
+                        class="md:text-xl"
+                    >
                        Sair
                     </x-responsive-nav-link>
                 </button>
