@@ -8,6 +8,10 @@ Route::get('dashboard', [\App\Http\Controllers\DashboardController::class, 'inde
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
 
+Route::get('dashboard/notes', \App\Livewire\Pages\Notes\Index::class)
+    ->middleware(['auth', 'verified'])
+    ->name('dashboard.notes');
+
 Route::view('profile', 'profile')
     ->middleware(['auth'])
     ->name('profile');

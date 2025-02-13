@@ -30,7 +30,7 @@
 
             <div class="flex flex-col gap-3 items-center justify-center mt-4">
 
-                <a href="#"
+                <a href="{{ route('dashboard.notes') }}"
                    class="flex items-center gap-2 bg-primary text-white font-medium px-32 py-3 rounded-md shadow-md hover:bg-primary-accent duration-300"
                 >
                     Minhas anotações

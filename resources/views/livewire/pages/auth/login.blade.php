@@ -30,7 +30,7 @@ new #[Layout('layouts.guest')] class extends Component
 
     <div class="flex flex-col md:items-center mb-7">
         <h1 class="text-xl md:text-2xl font-semibold text-primary">
-            Bem vindo de volta
+            Bem vindo
         </h1>
 
         <p class="text-sm text-gray-accent font-normal">
