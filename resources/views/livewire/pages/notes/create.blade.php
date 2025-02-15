@@ -20,7 +20,6 @@
                     type="text"
                     wire:model="title"
                     name="title"
-                    autocomplete="user"
                 />
 
                 <div class="mt-2 text-red-500 text-sm h-5">
