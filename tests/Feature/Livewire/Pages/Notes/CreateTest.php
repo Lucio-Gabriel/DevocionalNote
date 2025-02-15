@@ -24,5 +24,6 @@ it('should be able to create notes', function () {
         ->set('title', 'Test Note')
         ->set('content', 'Test Content')
         ->call('save')
+        ->assertRedirect(route('dashboard.notes'))
         ->assertSuccessful();
 });
