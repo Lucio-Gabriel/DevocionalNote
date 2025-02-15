@@ -128,9 +128,9 @@ new #[Layout('layouts.guest')] class extends Component
         </div>
 
         <div class="flex justify-center items-center mt-8">
-            <x-primary-button class="ms-4">
+            <button class="flex items-center gap-2 bg-primary text-white font-medium px-48 md:px-40 py-3 rounded-md shadow-md hover:bg-primary-accent duration-300">
                 Registrar
-            </x-primary-button>
+            </button>
         </div>
 
         <div class="flex items-center justify-center mt-96 md:mt-4">
