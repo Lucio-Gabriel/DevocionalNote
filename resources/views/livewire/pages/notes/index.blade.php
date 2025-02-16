@@ -24,7 +24,9 @@
 
      @foreach($this->notes as $note)
      <a
-        href="#"
+         href="{{ route('notes.show', $note) }}
+"
+{{--        x-on:click="Livewire.navigate('{{ route('notes.show', $note) }}')"--}}
         class="bg-accent-gray flex items-start justify-start ml-4 mr-5 md:ml-72 md:mr-72 py-8 mt-8 rounded-md shadow-lg max-w-full scale-100 hover:scale-105 duration-300">
         <div class="flex ml-5">
             <span class="text-4xl font-semibold mt-1 text-primary">
