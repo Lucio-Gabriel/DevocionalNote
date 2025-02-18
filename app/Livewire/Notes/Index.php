@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Pages\Notes;
+namespace App\Livewire\Notes;
 
 use App\Models\Note;
 use Illuminate\Database\Eloquent\Collection;
@@ -18,7 +18,7 @@ class Index extends Component
 
     public function render()
     {
-        return view('livewire.pages.notes.index')
+        return view('livewire.notes.index')
             ->layout('layouts.app');
     }
 }

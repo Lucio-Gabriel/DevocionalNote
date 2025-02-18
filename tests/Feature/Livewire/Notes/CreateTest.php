@@ -1,7 +1,6 @@
 <?php
 
-use App\Livewire\Pages\Notes\Create;
-use App\Models\Note;
+use App\Livewire\Notes\Create;
 use App\Models\User;
 use Livewire\Livewire;
 use function Pest\Laravel\actingAs;

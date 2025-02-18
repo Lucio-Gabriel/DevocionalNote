@@ -1,10 +1,8 @@
 <?php
 
-namespace App\Livewire\Pages\Notes;
+namespace App\Livewire\Notes;
 
 use App\Models\Note;
-use Illuminate\Database\Eloquent\Collection;
-use Livewire\Attributes\Computed;
 use Livewire\Component;
 
 class Show extends Component
@@ -19,7 +17,7 @@ class Show extends Component
 
     public function render()
     {
-        return view('livewire.pages.notes.show')
+        return view('livewire.notes.show')
             ->layout('layouts.app');
     }
 }

@@ -8,15 +8,15 @@ Route::get('dashboard', [\App\Http\Controllers\DashboardController::class, 'inde
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
 
-Route::get('dashboard/notes', \App\Livewire\Pages\Notes\Index::class)
+Route::get('dashboard/notes', App\Livewire\Notes\Index::class)
     ->middleware(['auth', 'verified'])
     ->name('dashboard.notes');
 
-Route::get('dashboard/notes/create', \App\Livewire\Pages\Notes\Create::class)
+Route::get('dashboard/notes/create', \App\Livewire\Notes\Create::class)
     ->middleware(['auth', 'verified'])
     ->name('dashboard.notes.create');
 
-Route::get('dashboard/notes/{note}', \App\Livewire\Pages\Notes\Show::class)
+Route::get('dashboard/notes/{note}', \App\Livewire\Notes\Show::class)
     ->middleware(['auth', 'verified'])
     ->name('notes.show');
 

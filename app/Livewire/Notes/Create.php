@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Pages\Notes;
+namespace App\Livewire\Notes;
 
 use App\Models\Note;
 use Livewire\Attributes\Validate;
@@ -52,7 +52,7 @@ class Create extends Component
 
     public function render()
     {
-        return view('livewire.pages.notes.create')
+        return view('livewire.notes.create')
             ->layout('layouts.app');
     }
 }
