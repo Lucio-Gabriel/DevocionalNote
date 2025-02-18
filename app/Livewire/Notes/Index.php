@@ -16,6 +16,11 @@ class Index extends Component
         return Note::get();
     }
 
+    public function deleteNote(int $noteId)
+    {
+        Note::findOrFail($noteId)->delete();
+    }
+
     public function render()
     {
         return view('livewire.notes.index')

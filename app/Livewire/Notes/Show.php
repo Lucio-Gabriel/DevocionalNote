@@ -15,6 +15,11 @@ class Show extends Component
         $this->note = $note;
     }
 
+    public function deleteNote(int $noteId)
+    {
+        Note::findOrFail($noteId)->delete();
+    }
+
     public function render()
     {
         return view('livewire.notes.show')
