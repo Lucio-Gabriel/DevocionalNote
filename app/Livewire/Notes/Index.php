@@ -16,7 +16,7 @@ class Index extends Component
         return Note::get();
     }
 
-    public function deleteNote(int $noteId)
+    public function deleteNote(int $noteId): void
     {
         Note::findOrFail($noteId)->delete();
     }
