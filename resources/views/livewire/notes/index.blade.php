@@ -43,12 +43,13 @@
                  </div>
              </a>
 
-             <button
+             <a
+                 href="{{ route('dashboard.notes.edit', $note) }}"
+                 wire:navigate
                  class="text-2xl font-semibold mt-1 text-primary mr-5"
-                 type="button"
              >
                  <i class="bi bi-pencil-square"></i>
-             </button>
+             </a>
 
              <button
                  class="text-2xl font-semibold mt-1 text-primary mr-5"

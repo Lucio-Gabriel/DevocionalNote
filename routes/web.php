@@ -16,6 +16,10 @@ Route::get('dashboard/notes/create', \App\Livewire\Notes\Create::class)
     ->middleware(['auth', 'verified'])
     ->name('dashboard.notes.create');
 
+Route::get('dashboard/notes/{note}/edit', \App\Livewire\Notes\Edit::class)
+    ->middleware(['auth', 'verified'])
+    ->name('dashboard.notes.edit');
+
 Route::get('dashboard/notes/{note}', \App\Livewire\Notes\Show::class)
     ->middleware(['auth', 'verified'])
     ->name('notes.show');
