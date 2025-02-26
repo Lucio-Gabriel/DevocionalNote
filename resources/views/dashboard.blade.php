@@ -29,26 +29,13 @@
             </h2>
 
             <div class="flex flex-col gap-3 items-center justify-center mt-4">
-
-                <a href="{{ route('dashboard.notes') }}"
-                   class="flex items-center gap-2 bg-primary text-white font-medium px-32 py-3 rounded-md shadow-md hover:bg-primary-accent duration-300"
-                >
+                <x-btn.notes>
                     Minhas anotações
+                </x-btn.notes>
 
-                    <x-svg.notes
-                        class="w-5 h-5"
-                    />
-                </a>
-
-                <a href="#"
-                   class="flex items-center gap-2 bg-primary text-white font-medium px-40 py-3 rounded-md shadow-md hover:bg-primary-accent duration-300"
-                >
+                <x-btn.pomodoro>
                     Pomodoro
-
-                    <x-svg.alarm
-                        class="w-5 h-5"
-                    />
-                </a>
+                </x-btn.pomodoro>
             </div>
         </div>
     </div>
