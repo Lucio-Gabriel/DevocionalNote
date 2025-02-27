@@ -3,7 +3,7 @@
 <div x-data="{ showModal: false, noteId: null }">
     <button
         class="text-2xl font-semibold mt-1 text-primary mr-5"
-        @click="noteId = {{ $note->id }}; showModal = true"
+        @click="setTimeout(() => { noteId = {{ $note->id }}; showModal = true;}, 200)"
     >
         <i class="bi bi-trash"></i>
     </button>
@@ -12,6 +12,12 @@
         x-show="showModal"
         class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"
         x-cloak
+        x-transition:enter="transition ease-out duration-300"
+        x-transition:enter-start="opacity-0 scale-90"
+        x-transition:enter-end="opacity-100 scale-100"
+        x-transition:leave="transition ease-in duration-300"
+        x-transition:leave-start="opacity-100 scale-100"
+        x-transition:leave-end="opacity-0 scale-90"
     >
         <div class="bg-white rounded-lg shadow-xl max-w-lg w-full p-6">
             <h2 class="text-2xl font-bold text-center mb-4">Confirmar Exclusão</h2>
