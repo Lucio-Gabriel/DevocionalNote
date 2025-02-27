@@ -1,4 +1,4 @@
-<a href="#"
+<a href="{{ route('pomodoro.index') }}"
    class="flex items-center gap-2 bg-primary text-white font-medium px-40 py-3 rounded-md shadow-md hover:bg-primary-accent duration-300"
 >
     {{ $slot }}
