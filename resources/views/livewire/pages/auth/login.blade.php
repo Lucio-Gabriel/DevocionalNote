@@ -14,7 +14,18 @@ new #[Layout('layouts.guest')] class extends Component
      */
     public function login(): void
     {
-        $this->validate();
+        $this->validate(
+            rules: [
+              'form.email' => 'required|email',
+              'form.password' => 'required|min:8',
+            ],
+            messages: [
+                'form.email.required' => 'Por favor, informe seu email.',
+                'form.email.email' => 'Por favor, insira um email válido.',
+                'form.password.required' => 'A senha é obrigatório.',
+                'form.password.min' => 'A senha precisa ter pelo menos 8 caracteres.',
+            ]
+        );
 
         $this->form->authenticate();
 
@@ -52,7 +63,6 @@ new #[Layout('layouts.guest')] class extends Component
                           type="email"
                           name="email"
                           placeholder="Email"
-                          required autofocus
                           autocomplete="username"
             />
             <x-input-error :messages="$errors->get('form.email')" class="mt-2" />
@@ -72,7 +82,6 @@ new #[Layout('layouts.guest')] class extends Component
                                 type="password"
                                 name="password"
                                 placeholder="Senha"
-                                required autocomplete="current-password"
                 />
 
                 <x-input-error :messages="$errors->get('form.password')" class="mt-2" />
