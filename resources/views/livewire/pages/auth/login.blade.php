@@ -51,41 +51,26 @@ new #[Layout('layouts.guest')] class extends Component
 
     <form wire:submit="login">
         <!-- Email Address -->
-        <div class="relative">
-            <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
-                <x-svg.envelope
-                    class="w-5 h-5 text-gray-accent"
-                />
-            </div>
             <x-text-input wire:model="form.email"
-                          id="email"
-                          class="block mt-1 w-full"
-                          type="email"
-                          name="email"
-                          placeholder="Email"
-                          autocomplete="username"
+                id="email"
+                class="block mt-1 w-full"
+                type="email"
+                name="email"
+                placeholder="Email"
+                autocomplete="username"
             />
-            <x-input-error :messages="$errors->get('form.email')" class="mt-2" />
-        </div>
+
+            <x-input-error :messages="$errors->get('form.email')" class="mt-2 " />
 
         <!-- Password -->
         <div class="mt-4">
-            <div class="relative">
-                <div>
-                    <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
-                        <x-svg.password
-                            class="w-5 h-5 text-gray-accent"
-                        />
-                    </div>
-                </div>
-                <x-text-input wire:model="form.password" id="password" class="block mt-1 w-full"
-                                type="password"
-                                name="password"
-                                placeholder="Senha"
-                />
+            <x-text-input wire:model="form.password" id="password" class="block mt-1 w-full"
+                type="password"
+                name="password"
+                placeholder="Senha"
+            />
 
-                <x-input-error :messages="$errors->get('form.password')" class="mt-2" />
-            </div>
+            <x-input-error :messages="$errors->get('form.password')" class="mt-2" />
         </div>
 
         <div class="flex justify-end items-end mt-3.5">
