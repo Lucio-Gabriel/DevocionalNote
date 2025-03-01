@@ -14,7 +14,7 @@
                     />
                 </div>
 
-                <x-text-input
+                <x-text-input-note
                     id="title"
                     class="block mt-1 w-full"
                     type="text"
