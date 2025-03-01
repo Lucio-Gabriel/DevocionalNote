@@ -24,6 +24,13 @@ new #[Layout('layouts.guest')] class extends Component
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'string', 'confirmed', Rules\Password::defaults()],
+        ], [
+            'name.required' => 'Por favor, informe o seu nome.',
+            'email.required' => 'Por favor, informe o seu email.',
+            'email.email' => 'Por favor, insira um email válido.',
+            'email.unique' => 'O email informado já está em uso.',
+            'password.required' => 'Por favor, informe uma senha.',
+            'password.confirmed' => 'A senha de confirmação não confere.',
         ]);
 
         $validated['password'] = Hash::make($validated['password']);
@@ -50,78 +57,51 @@ new #[Layout('layouts.guest')] class extends Component
 
     <form wire:submit="register">
         <!-- Name -->
-        <div class="relative">
-            <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
-                <x-svg.person
-                    class="w-5 h-5 text-gray-accent"
-                />
-            </div>
-            <x-text-input wire:model="name"
-                          id="name"
-                          class="block mt-1 w-full"
-                          type="text"
-                          name="name"
-                          placeholder="Nome"
-                          required
-                          autofocus autocomplete="name"
-            />
-            <x-input-error :messages="$errors->get('name')" class="mt-2" />
-        </div>
+        <x-text-input wire:model="name"
+            id="name"
+            class="block mt-1 w-full"
+            type="text"
+            name="name"
+            placeholder="Nome"
+        />
+
+        <x-input-error :messages="$errors->get('name')" class="mt-2" />
 
         <!-- Email Address -->
-        <div class="mt-4 relative">
-            <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
-                <x-svg.envelope
-                    class="w-5 h-5 text-gray-accent"
-                />
-            </div>
+        <div class="mt-4">
             <x-text-input wire:model="email"
-                          id="email"
-                          class="block mt-1 w-full"
-                          type="email"
-                          name="email"
-                          placeholder="Email"
-                          required
-                          autocomplete="username"
+                id="email"
+                class="block mt-1 w-full"
+                type="email"
+                name="email"
+                placeholder="Email"
             />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
 
+        <x-input-error :messages="$errors->get('email')" class="mt-2"/>
+
         <!-- Password -->
-        <div class="mt-4 relative">
-            <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
-                <x-svg.password
-                    class="w-5 h-5 text-gray-accent"
-                />
-            </div>
+        <div class="mt-4">
             <x-text-input wire:model="password"
-                          id="password"
-                          class="block mt-1 w-full"
-                          type="password"
-                          name="password"
-                          placeholder="Senha"
-                          required
-                          autocomplete="new-password"
+                id="password"
+                class="block mt-1 w-full"
+                type="password"
+                name="password"
+                placeholder="Senha"
             />
 
             <x-input-error :messages="$errors->get('password')" class="mt-2" />
         </div>
 
         <!-- Confirm Password -->
-        <div class="mt-4 relative">
-            <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
-                <x-svg.password
-                    class="w-5 h-5 text-gray-accent"
-                />
-            </div>
-            <x-text-input wire:model="password_confirmation"
-                          id="password_confirmation"
-                          class="block mt-1 w-full"
-                          type="password"
-                          name="password_confirmation"
-                          placeholder="Confirma senha"
-                          required
-                          autocomplete="new-password"
+        <div class="mt-4">
+            <x-text-input
+                wire:model="password_confirmation"
+                id="password_confirmation"
+                class="block mt-1 w-full"
+                type="password"
+                name="password_confirmation"
+                placeholder="Confirma senha"
             />
 
             <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
