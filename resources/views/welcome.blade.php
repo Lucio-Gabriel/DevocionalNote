@@ -26,9 +26,9 @@
             </div>
 
             <div class="flex justify-center items-center mt-4 px-4 md:px-16">
-                <h1 class="font-normal max-w-3xl text-center">
-                    Registre e organize suas reflexões e passagens bíblicas em um só lugar.
-                    Fortaleça sua caminhada espiritual de forma simples e prática!
+                <h1 class="font-semibold max-w-3xl text-center">
+                    Organize reflexões e fortaleça sua espiritualidade com simplicidade utilizando o
+                    <br><span class="text-primary">DevocionalNote</span>.
                 </h1>
             </div>
 
@@ -46,6 +46,17 @@
                 >
                     Crie sua conta
                 </a>
+            </div>
+
+            <div class="flex flex-col items-center justify-center mt-8">
+                <h1>Ou inicie sessão com</h1>
+
+                <button
+                    type="button"
+                    class="text-primary text-3xl bg-white hover:bg-primary duration-300 hover:text-white px-12 py-2 rounded-md mt-3 cursor-pointer shadow-lg"
+                >
+                    <x-svg.google />
+                </button>
             </div>
         </div>
     </body>
