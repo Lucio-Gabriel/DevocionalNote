@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>DevocionalNote</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +15,7 @@
         <!-- Styles -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="antialiased font-sans">
+    <body class="antialiased font-sans bg-[#F9F1E6]">
         <div class="flex flex-col items-center justify-center mt-48">
             <div>
                 <img
@@ -25,7 +25,14 @@
                 />
             </div>
 
-            <div class="flex flex-col gap-3 mt-10">
+            <div class="flex justify-center items-center mt-4 px-4 md:px-16">
+                <h1 class="font-semibold max-w-3xl text-center">
+                    Organize reflexões e fortaleça sua espiritualidade com simplicidade utilizando o
+                    <br><span class="text-primary">DevocionalNote</span>.
+                </h1>
+            </div>
+
+            <div class="flex flex-col gap-3 mt-5">
                 <a
                     href="{{ route('login') }}"
                     class="bg-primary text-white text-center font-medium px-24 py-2 hover:bg-primary-accent duration-300 rounded-md shadow-lg"
@@ -35,10 +42,21 @@
 
                 <a
                     href="{{ route('register') }}"
-                    class="bg-primary text-white text-center font-medium px-24 py-2 hover:bg-primary-accent duration-300 rounded-md shadow-lg"
+                    class="bg-white text-primary text-center font-medium px-24 py-2 hover:bg-slate-300 duration-300 rounded-md shadow-lg outline outline-2 outline-primary outline-offset-0"
                 >
-                    Registrar-se
+                    Crie sua conta
                 </a>
+            </div>
+
+            <div class="flex flex-col items-center justify-center mt-8">
+                <h1>Ou inicie sessão com</h1>
+
+                <button
+                    type="button"
+                    class="text-primary text-3xl bg-white hover:bg-primary duration-300 hover:text-white px-12 py-2 rounded-md mt-3 cursor-pointer shadow-lg"
+                >
+                    <x-svg.google />
+                </button>
             </div>
         </div>
     </body>
