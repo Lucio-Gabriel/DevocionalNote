@@ -51,12 +51,12 @@
             <div class="flex flex-col items-center justify-center mt-8">
                 <h1>Ou inicie sessão com</h1>
 
-                <button
-                    type="button"
+                <a
+                    href="{{ route('auth.google') }}"
                     class="text-primary text-3xl bg-white hover:bg-primary duration-300 hover:text-white px-12 py-2 rounded-md mt-3 cursor-pointer shadow-lg"
                 >
                     <x-svg.google />
-                </button>
+                </a>
             </div>
         </div>
     </body>
