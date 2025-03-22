@@ -1,5 +1,6 @@
-![Logo do Devocional Note](public/images/logoNote.png)
-
+<p align="center">
+  <img src="public/images/logoNote.png" alt="Logo do Devocional Note">
+</p>
 
 # DevocionalNote 📖
 
