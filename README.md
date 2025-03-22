@@ -21,7 +21,7 @@ O Devocional Note é um projeto criado para ajudar pessoas que desejam registrar
 - Criação, Atualização e Deleção de suas notas
 - Responsivo
 - UI e UX designer perfomaticos
-- Facilidade no de uso
+- Facilidade no uso
 
 
 ## Instalação do DevocionalNote
